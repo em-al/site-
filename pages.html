@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8"/>
+  <title>Suite</title>
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+  <link href="index.html" type="text/html"/><F2>
+<style>
+body {
+  font-size:15px;  
+}
+
+h1 {
+  margin:auto;
+  font-size:12px;
+  color:white;
+}
+
+h3 {
+  text-transform:uppercase;
+}
+</style>
+</head>
+<body>
+   <h3>-Mes Projets-</h3>
+   <h1><em>L'histoire sans fin</em></h1>
+   <div id="histoire" style="color: white;">Il était une fois,
+   </div>
+   <input id="ajout">
+   <button id="reponse">Valider</button>
+
+<script type="text/javascript">
+histoire = document.getElementById("histoire");
+ajout = document.getElementById("ajout");
+button = document.getElementById("reponse");
+
+function ajouter() {
+    histoire.innerHTML += ajout.value;
+    histoire.innerHTML + " ";
+
+}
+button.onclick = ajouter;
+</script>
+</body>
+</html>

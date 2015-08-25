@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8"/>
+  <title>Suite</title>
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+  <link href="index.html" type="text/html"/><F2>
+<style>
+body {
+    height:400px;
+    width:500px;
+    padding:10px;
+    margin:auto;
+}
+#global {
+    background-color:#C1B6E7;
+    border:dashed 1px white;
+}
+
+h3 {
+    animation-duration:3s;
+    animation-name:slidein;
+  }
+  
+@keyframes slidein {
+from {
+    margin-left:100%;
+    width:300%
+    }
+    
+to {
+    margin-left:0%;
+    width:100%;
+    }
+</style>
+</head>
+<body>
+  <h3>-Mes Compétences-</h3>
+
+  <div id="global">
+  
+    <h3>Mystère Game</h3>
+
+    <p>Trouve le nombre caché entre 1 et 1000! Clique sur le premier bouton valider pour commencer la partie !</p>
+      <div id="fond">
+    <p>Proposition :
+    <input id="entree" type="number" />
+    <br/>
+    <br/>
+    <input id="boutonValider1" type="button" value="Entre un nb" />
+    <input id="boutonValider" type="button" value="Valider" />
+            
+    </p>
+    <p>Message : <span id="message"></span>
+    </p>
+      </div>
+<script type="text/javascript">
+var entree = document.getElementById("entree");
+var boutonValider = document.getElementById("boutonValider");
+var resultat = document.getElementById("message");
+var boutonValider1 = document.getElementById("boutonValider1");
+var valeur;
+var cherche;
+var coups = 0;
+var valeur;
+var cherche;
+
+boutonValider1.onclick = function () {
+    valeur = prompt ("Entre le nombre à faire deviner:");
+     
+    return valeur;
+};
+
+boutonValider.onclick = function () {
+    cherche = entree.value;
+    if (valeur > cherche) {
+        resultat.innerHTML = "un peu plus"; 
+    } else if (valeur < cherche) {
+        resultat.innerHTML = "un peu moins";
+    } else if (valeur==cherche){
+        resultat.innerHTML = "Cool, tu as trouvé le nombre mystère!!";
+    }
+};
+
+</script>
+</body>
+</html>

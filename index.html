@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Site Em</title>
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+  <link href="index.html" type="text/html"/><F2>
+</head>
+<body>
+  <h3>-Bienvenue sur mon site-</h3>
+  <ul id="carousel">
+    <li><img src="http://www.summer-breeze.de/fr/dateien/bands/2015/powerwolf86734514.jpg?x=810" style="width:850px; height:590px;"/></li>
+    <li><img src="https://scontent-fra3-1.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/11130091_10206935310327203_4413402821000999715_n.jpg?oh=c2e7be7a59dc80e54811e59f7a49e3b5&oe=564A9A83" style="width:850px; height:590px;"/></li>
+    <li><img src="http://www.metalorgie.com/alb_thumb/6/Powerwolf_2015_BlessedAndPossessed_cover.jpg" style="width:850px; height:590px;"/></li>
+   </ul>
+
+<div id="conteneur-menu2">
+   <ul>
+     <li><a href="#">Accueil</a></li>
+     <li><a href="suite.html">Compétences</a></li>
+     <li><a href="pages.html">Projets</a></li>
+     <li><a href="dernier.html">Contacts</a></li>
+   </ul>
+</div>
+<script type="text/javascript">
+var $carousel = document.getElementById("carousel");
+var counter = 1;
+
+
+function carousel() {
+    var interval = setInterval(function(){
+        for (i = 0; i < $carousel.children.length; i++) {
+             $carousel.children[i].style.opacity = "0";
+        };
+        $carousel.children[counter].style.opacity = "1";
+        counter++;
+        if (counter == $carousel.children.length) { 
+            counter = 0
+        };
+    },  2900);
+};
+carousel();
+</script>
+</body>
+</html>
